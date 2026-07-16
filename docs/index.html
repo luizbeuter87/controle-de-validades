@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Validades - Mercado tchê</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <div id="telaLogin" class="card">
+        <h2>Controle Validades Tchê</h2>
+        <div class="login-form">
+            <input type="text" id="usuario" placeholder="Usuário">
+            <input type="password" id="senha" placeholder="Senha">
+            <button class="btn-primary" onclick="autenticar()">Entrar no Sistema</button>
+            <p id="erroLogin" class="erro"></p>
+        </div>
+    </div>
+
+    <div id="sistemaPrincipal" class="card" style="display: none;">
+        <h2>Controle de Validades</h2>
+        
+        <div class="form-group">
+            <input type="text" id="produto" class="full-width" placeholder="Nome do Produto">
+            <input type="date" id="dataVencimento">
+            <input type="number" id="quantidade" placeholder="Unidades">
+            <button class="btn-primary full-width" onclick="adicionarOuSalvar()">Salvar no Inventário</button>
+        </div>
+
+        <input type="text" id="busca" class="search-box" placeholder="🔍 Pesquisar produto..." onkeyup="renderizar()">
+
+        <ul id="listaValidades"></ul>
+
+        <button class="btn-logout" onclick="logout()">Sair do Sistema</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

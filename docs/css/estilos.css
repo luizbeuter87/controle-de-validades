@@ -1,0 +1,96 @@
+/* Estilos principais do projeto */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f4f7fb;
+}
+
+.card {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.login-form,
+.form-group {
+    display: grid;
+    gap: 12px;
+}
+
+input,
+button {
+    padding: 12px;
+    border: 1px solid #dde4ef;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #3b82f6;
+    color: white;
+    border: none;
+}
+
+.btn-logout {
+    width: 100%;
+    background: #ef4444;
+    color: white;
+    border: none;
+}
+
+.search-box {
+    width: 100%;
+}
+
+.status-ok {
+    background: #e0f2fe;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-alerta {
+    background: #fef3c7;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-critico {
+    background: #fee2e2;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.erro {
+    color: #dc2626;
+}
+
+.acoes button {
+    border: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
