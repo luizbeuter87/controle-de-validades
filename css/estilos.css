@@ -1,0 +1,103 @@
+/* 1. CONFIGURAÇÕES GERAIS E BOX MODEL [3] */
+body { 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    background-color: #f0f2f5; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; /* Ocupa toda a altura da tela */
+}
+
+/* 2. CARD PRINCIPAL (LOGIN E SISTEMA) [3, 4] */
+.card { 
+    background: white; 
+    padding: 25px; /* Espaçamento interno (Box Model) [3] */
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    width: 100%; 
+    max-width: 500px; 
+    margin: 20px; /* Espaçamento externo [3] */
+}
+
+h2 { text-align: center; color: #1a1a1a; }
+
+/* 3. FORMULÁRIOS E INPUTS [5] */
+.form-group { 
+    display: grid; 
+    grid-template-columns: 2fr 1fr; /* Layout moderno em grade [6] */
+    gap: 12px; 
+    margin-bottom: 20px; 
+}
+
+.full-width { grid-column: span 2; }
+
+input { 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 6px; 
+    font-size: 16px; 
+}
+
+/* 4. BOTÕES E INTERATIVIDADE [7] */
+button { 
+    padding: 12px; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    transition: 0.3s;
+}
+
+.btn-primary { background-color: #007bff; color: white; width: 100%; }
+.btn-primary:hover { background-color: #0056b3; }
+
+.search-box { 
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 2px solid #e0e0e0; 
+    border-radius: 6px; 
+    box-sizing: border-box; /* Garante que padding não aumente a largura [3] */
+}
+
+/* 5. GESTÃO DE RISCOS OPERACIONAIS (STATUS DE VALIDADE) */
+ul { list-style: none; padding: 0; }
+
+li { 
+    background: #fff; 
+    border: 1px solid #ddd; 
+    margin-bottom: 10px; 
+    padding: 15px; 
+    border-radius: 8px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; /* Alinhamento via Flexbox [6] */
+}
+
+/* REGRA DE 5 DIAS: Vermelho para urgência crítica */
+.status-critico { 
+    border-left: 10px solid #dc3545; 
+    background-color: #fff5f5; 
+}
+
+/* Alerta amarelo (6 a 15 dias) */
+.status-alerta { 
+    border-left: 10px solid #ffc107; 
+    background-color: #fffdf0; 
+}
+
+/* OK (mais de 15 dias) */
+.status-ok { 
+    border-left: 10px solid #28a745; 
+}
+
+/* Badges e Ações */
+.qtd-badge { background: #343a40; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; }
+.btn-logout { background-color: #6c757d; color: white; margin-top: 20px; width: 100%; }
+
+/* 6. RESPONSIVIDADE (MOBILE-FIRST) [8] */
+@media (max-width: 480px) {
+    .form-group { grid-template-columns: 1fr; }
+    .full-width { grid-column: span 1; }
+}
