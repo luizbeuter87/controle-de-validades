@@ -8,7 +8,7 @@ function autenticar() {
     const telaLogin = document.getElementById("telaLogin");
     const sistema = document.getElementById("sistemaPrincipal");
 
-    if (usuario === "tche" && senha === "3430") {
+    if (usuario === "tche" && senha === "123") {
         telaLogin.style.display = "none";
         sistema.style.display = "block";
         renderizar();
